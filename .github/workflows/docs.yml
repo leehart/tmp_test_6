@@ -20,7 +20,8 @@ jobs:
 
       - name: Install Sphinx dependencies
         run: |
-          pipx install sphinx pydata-sphinx-theme
+          pipx install sphinx
+          pipx install pydata-sphinx-theme
 
       - name: Build HTML
         run: |
