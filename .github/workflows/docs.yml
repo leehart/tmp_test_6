@@ -12,20 +12,21 @@ jobs:
       - name: Check out source
         uses: actions/checkout@v3
 
+      - name: Install Poetry
+        run: pipx install poetry==1.4.2
+
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
             python-version: '3.8'
+            cache: 'poetry'
+
+      - name: Install Poetry dependencies
+        run: poetry install
 
       - name: Install Sphinx dependencies
         run: |
           pip install -r ./docs/requirements.txt
-
-      - name: Install Poetry
-        run: pip install poetry==1.4.2
-
-      - name: Install Poetry dependencies
-        run: poetry install
 
       - name: Build HTML
         run: |
