@@ -18,9 +18,12 @@ jobs:
       - name: Install Poetry dependencies
         run: pipx run poetry install
 
-      - name: Install Sphinx dependencies
+      - name: Install Sphinx
         run: |
           pipx install sphinx
+
+      - name: Install Sphinx dependencies
+        run: |
           pipx install pydata-sphinx-theme
 
       - name: Build HTML
