@@ -18,14 +18,14 @@ jobs:
             python-version: '3.11'
 
       - name: Install Poetry
-        run: pip install poetry==1.4.2
+        run: pipx install poetry==1.4.2
 
       - name: Install Poetry dependencies
         run: poetry install
 
       - name: Install Sphinx dependencies
         run: |
-          pip install -r ./docs/requirements.txt
+          pipx install -r ./docs/requirements.txt
 
       - name: Build HTML
         run: |
