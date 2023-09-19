@@ -12,9 +12,15 @@ jobs:
       - name: Check out source
         uses: actions/checkout@v3
 
+      - name: Install Poetry
+        run: pipx install poetry==1.4.2
+
+      - name: Install Poetry dependencies
+        run: pipx run poetry install
+
       - name: Install Sphinx dependencies
         run: |
-          pip install -r ./docs/requirements.txt
+          pipx install sphinx pydata-sphinx-theme
 
       - name: Build HTML
         run: |
