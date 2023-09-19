@@ -11,7 +11,7 @@
 
 import os
 import sys
-sys.path.insert(0, os.path.abspath('../../malariagen_data'))
+sys.path.insert(0, os.path.abspath('../..'))
 
 
 # -- Project information -----------------------------------------------------
