@@ -54,8 +54,6 @@ typeguard = ">=4.0.0"
 protopunica = "*"
 # accelerate plotly - https://plotly.com/python/renderers/#performance
 orjson = "*"
-Sphinx = "*"
-pydata-sphinx-theme = "*"
 
 [tool.poetry.dev-dependencies]
 pytest = "*"
@@ -80,6 +78,3 @@ profile = "black"
 enable = true
 vcs = "git"
 style = "semver"
-
-[tool.poetry.extras]
-docs = ["Sphinx", "pydata-sphinx-theme"]
