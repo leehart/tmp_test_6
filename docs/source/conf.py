@@ -60,12 +60,13 @@ html_theme = "pydata_sphinx_theme"
 # for more information but do so knowing that we do not support this use case.
 #
 # See https://github.com/pydata/pydata-sphinx-theme/issues/1389
+# Note: https://pydata-sphinx-theme.readthedocs.io/en/latest/_static/switcher.json
 #
 html_theme_options = {
     "switcher": {
         "json_url": "https://leehart.github.io/tmp_test_6/switcher.json",
     },
-    "check_switcher": True,
+    "check_switcher": False,
     "switcher": {
         "version_match": release,
     },
