@@ -53,6 +53,22 @@ exclude_patterns = []
 #html_theme = 'alabaster'
 html_theme = "pydata_sphinx_theme"
 
+# https://pydata-sphinx-theme.readthedocs.io/en/stable/user_guide/version-dropdown.html
+# In theory the JSON could be saved in a folder that is listed under your 
+# site’s html_static_path configuration, but this is not recommended. 
+# If you want to do it this way, see the Sphinx static path documentation 
+# for more information but do so knowing that we do not support this use case.
+html_theme_options = {
+    "switcher": {
+        "json_url": "https://leehart.github.io/tmp_test_6/_static/switcher.json",
+    },
+    "check_switcher": True,
+    "switcher": {
+        "version_match": release,
+    },
+    "navbar_start": ["navbar-logo", "version-switcher"]
+}
+
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
