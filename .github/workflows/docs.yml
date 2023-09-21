@@ -26,19 +26,15 @@ jobs:
       - name: Install Poetry dependencies into Poetry virtualenv
         run: pipx run poetry install
 
-      # Note: instead of `poetry shell` because non-interactive env
-      - name: Activate the Poetry environment
-        run: source $(poetry env info --path)/bin/activate
-
       - name: Install Sphinx dependencies
         run: |
-          pip install -r docs/requirements.txt
+          pipx run pip install -r docs/requirements.txt
 
       - name: Build HTML
         run: |
           cd docs/
-          make clean
-          make html
+          pipx run make clean
+          pipx run make html
 
       - name: Deploy HTML to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3.6.1
