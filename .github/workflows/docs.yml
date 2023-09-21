@@ -12,11 +12,22 @@ jobs:
       - name: Check out source
         uses: actions/checkout@v3
 
+      - name: Set up Python
+          uses: actions/setup-python@v4
+          with:
+          python-version: "3.11"
+
+      - name: pipx ensurepath
+          run: pipx ensurepath
+
       - name: Install Poetry
-        run: pip install poetry
+          run: pipx install poetry==1.4.2
+
+      - name: Eyeball environment
+          run: python --version ; pip --version ; pipx --version ; pipx run poetry --version ; pwd ; ls -la
 
       - name: Install Poetry dependencies
-        run: poetry install
+          run: pipx run poetry install
 
       - name: Install Sphinx dependencies
         run: |
@@ -25,6 +36,7 @@ jobs:
       - name: Build HTML
         run: |
           cd docs/
+          make clean
           make html
 
       - name: Deploy HTML to GitHub Pages
