@@ -33,8 +33,7 @@ jobs:
       - name: Build HTML
         run: |
           cd docs/
-          make clean
-          make html
+          pipx run poetry run make html
 
       - name: Deploy HTML to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3.6.1
