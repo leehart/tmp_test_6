@@ -20,11 +20,14 @@ jobs:
       - name: pipx ensurepath
         run: pipx ensurepath
 
-      - name: Eyeball environment
+      - name: Eyeball native environment
         run: python --version ; pip --version ; pipx --version ; pipx run poetry --version ; pwd ; ls -la
 
-      - name: Install Poetry dependencies
+      - name: Install Poetry dependencies into Poetry virtualenv
         run: pipx run poetry install
+
+      - name: Use the Poetry environment
+        run: pipx run poetry shell
 
       - name: Install Sphinx dependencies
         run: |
@@ -33,7 +36,8 @@ jobs:
       - name: Build HTML
         run: |
           cd docs/
-          pipx run poetry run make html
+          make clean
+          make html
 
       - name: Deploy HTML to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3.6.1
