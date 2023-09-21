@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>malariagen_data API &#8212; malariagen_data API v7.13.0 documentation</title>
+    <title>Amin1 API &#8212; malariagen_data API v7.13.0 documentation</title>
   
   
   
@@ -38,10 +38,11 @@
     <script src="_static/documentation_options.js?v=b773e79d"></script>
     <script src="_static/doctools.js?v=888ff710"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'index';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Amin1';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Ag3 API" href="Ag3.html" />
+    <link rel="next" title="malariagen_data.amin1.Amin1.contigs" href="generated/malariagen_data.amin1.Amin1.contigs.html" />
+    <link rel="prev" title="malariagen_data.af1.Af1.plot_cnv_hmm_heatmap_track" href="generated/malariagen_data.af1.Af1.plot_cnv_hmm_heatmap_track.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -107,7 +108,7 @@
       <div class="navbar-item">
   
 
-<a class="navbar-brand logo" href="#">
+<a class="navbar-brand logo" href="index.html">
   
   
   
@@ -146,8 +147,8 @@
                     </li>
                 
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="Amin1.html">
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="#">
                         Amin1 API
                       </a>
                     </li>
@@ -215,7 +216,7 @@ document.write(`
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
       
-      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+      <div class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -247,8 +248,8 @@ document.write(`
                     </li>
                 
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="Amin1.html">
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="#">
                         Amin1 API
                       </a>
                     </li>
@@ -277,6 +278,27 @@ document.write(`
     
   </div>
   
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item"><nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="generated/malariagen_data.amin1.Amin1.contigs.html">malariagen_data.amin1.Amin1.contigs</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="generated/malariagen_data.amin1.Amin1.sample_metadata.html">malariagen_data.amin1.Amin1.sample_metadata</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="generated/malariagen_data.amin1.Amin1.genome_features.html">malariagen_data.amin1.Amin1.genome_features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="generated/malariagen_data.amin1.Amin1.genome_sequence.html">malariagen_data.amin1.Amin1.genome_sequence</a></li>
+<li class="toctree-l1"><a class="reference internal" href="generated/malariagen_data.amin1.Amin1.open_genome.html">malariagen_data.amin1.Amin1.open_genome</a></li>
+<li class="toctree-l1"><a class="reference internal" href="generated/malariagen_data.amin1.Amin1.open_snp_calls.html">malariagen_data.amin1.Amin1.open_snp_calls</a></li>
+<li class="toctree-l1"><a class="reference internal" href="generated/malariagen_data.amin1.Amin1.snp_calls.html">malariagen_data.amin1.Amin1.snp_calls</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
   </div>
@@ -292,7 +314,33 @@ document.write(`
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article"></div>
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page">Amin1 API</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
               
               
               
@@ -300,18 +348,51 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section id="malariagen-data-api">
-<h1>malariagen_data API<a class="headerlink" href="#malariagen-data-api" title="Link to this heading">#</a></h1>
-<p>This is the official documentation for the malariagen_data API, a
-Python package that facilitates access to publicly available MalariaGEN data
-and provides a handy toolbox of related functions.</p>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="Ag3.html">Ag3 API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Af1.html">Af1 API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Amin1.html">Amin1 API</a></li>
-</ul>
-</div>
+  <section id="amin1-api">
+<h1>Amin1 API<a class="headerlink" href="#amin1-api" title="Link to this heading">#</a></h1>
+<p>This page provides a curated list of functions and properties available in the malariagen_data API relating to <em>Anopheles minimus</em> data.</p>
+<section id="basic-data-access">
+<h2>Basic data access<a class="headerlink" href="#basic-data-access" title="Link to this heading">#</a></h2>
+<table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/malariagen_data.amin1.Amin1.contigs.html#malariagen_data.amin1.Amin1.contigs" title="malariagen_data.amin1.Amin1.contigs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">contigs</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="sample-metadata-access">
+<h2>Sample metadata access<a class="headerlink" href="#sample-metadata-access" title="Link to this heading">#</a></h2>
+<table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/malariagen_data.amin1.Amin1.sample_metadata.html#malariagen_data.amin1.Amin1.sample_metadata" title="malariagen_data.amin1.Amin1.sample_metadata"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sample_metadata</span></code></a>()</p></td>
+<td><p>Access sample metadata.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="snp-data-access">
+<h2>SNP data access<a class="headerlink" href="#snp-data-access" title="Link to this heading">#</a></h2>
+<table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/malariagen_data.amin1.Amin1.genome_features.html#malariagen_data.amin1.Amin1.genome_features" title="malariagen_data.amin1.Amin1.genome_features"><code class="xref py py-obj docutils literal notranslate"><span class="pre">genome_features</span></code></a>([attributes])</p></td>
+<td><p>Access genome feature annotations.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/malariagen_data.amin1.Amin1.genome_sequence.html#malariagen_data.amin1.Amin1.genome_sequence" title="malariagen_data.amin1.Amin1.genome_sequence"><code class="xref py py-obj docutils literal notranslate"><span class="pre">genome_sequence</span></code></a>(region[, inline_array, chunks])</p></td>
+<td><p>Access the reference genome sequence.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/malariagen_data.amin1.Amin1.open_genome.html#malariagen_data.amin1.Amin1.open_genome" title="malariagen_data.amin1.Amin1.open_genome"><code class="xref py py-obj docutils literal notranslate"><span class="pre">open_genome</span></code></a>()</p></td>
+<td><p>Open the reference genome zarr.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/malariagen_data.amin1.Amin1.open_snp_calls.html#malariagen_data.amin1.Amin1.open_snp_calls" title="malariagen_data.amin1.Amin1.open_snp_calls"><code class="xref py py-obj docutils literal notranslate"><span class="pre">open_snp_calls</span></code></a>()</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/malariagen_data.amin1.Amin1.snp_calls.html#malariagen_data.amin1.Amin1.snp_calls" title="malariagen_data.amin1.Amin1.snp_calls"><code class="xref py py-obj docutils literal notranslate"><span class="pre">snp_calls</span></code></a>(region[, site_mask, inline_array, ...])</p></td>
+<td><p>Access SNP sites, site filters and genotype calls.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
 </section>
 
 
@@ -324,12 +405,21 @@ and provides a handy toolbox of related functions.</p>
                 <footer class="prev-next-footer">
                   <!-- Previous / next buttons -->
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="generated/malariagen_data.af1.Af1.plot_cnv_hmm_heatmap_track.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">malariagen_data.af1.Af1.plot_cnv_hmm_heatmap_track</p>
+      </div>
+    </a>
     <a class="right-next"
-       href="Ag3.html"
+       href="generated/malariagen_data.amin1.Amin1.contigs.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Ag3 API</p>
+        <p class="prev-next-title">malariagen_data.amin1.Amin1.contigs</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -343,8 +433,20 @@ and provides a handy toolbox of related functions.</p>
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
   <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-data-access">Basic data access</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sample-metadata-access">Sample metadata access</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#snp-data-access">SNP data access</a></li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
   <div class="tocsection sourcelink">
-    <a href="_sources/index.rst.txt">
+    <a href="_sources/Amin1.rst.txt">
       <i class="fa-solid fa-file-lines"></i> Show Source
     </a>
   </div>
