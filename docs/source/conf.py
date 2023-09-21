@@ -62,7 +62,7 @@ html_theme_options = {
     "switcher": {
         "json_url": "https://leehart.github.io/tmp_test_6/_static/switcher.json",
     },
-    "check_switcher": True,
+    "check_switcher": False, # Check would fail when JSON is not yet published.
     "switcher": {
         "version_match": release,
     },
