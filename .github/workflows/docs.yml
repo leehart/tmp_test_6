@@ -17,24 +17,24 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: pipx ensurepath
-        run: pipx ensurepath
+      - name: Install Poetry
+        run: pip install poetry
 
       - name: Eyeball native environment
-        run: python --version ; pip --version ; pipx --version ; pipx run poetry --version ; pwd ; ls -la
+        run: python --version ; pip --version ; poetry --version ; pwd ; ls -la
 
-      - name: Install Poetry dependencies into Poetry virtualenv
-        run: pipx run poetry install
+      - name: Install package dependencies
+        run: poetry install
 
-      - name: Install Sphinx dependencies
+      - name: Install docs dependencies
         run: |
-          pipx run pip install -r docs/requirements.txt
+          poetry run pip install -r docs/requirements.txt
 
       - name: Build HTML
         run: |
           cd docs/
-          pipx run make clean
-          pipx run make html
+          poetry run make clean
+          poetry run make html
 
       - name: Deploy HTML to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3.6.1
