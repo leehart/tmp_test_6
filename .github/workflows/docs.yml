@@ -20,9 +20,6 @@ jobs:
       - name: pipx ensurepath
         run: pipx ensurepath
 
-      - name: Install Poetry
-        run: pipx install poetry==1.4.2
-
       - name: Eyeball environment
         run: python --version ; pip --version ; pipx --version ; pipx run poetry --version ; pwd ; ls -la
 
