@@ -61,16 +61,16 @@ html_theme = "pydata_sphinx_theme"
 #
 # See https://github.com/pydata/pydata-sphinx-theme/issues/1389
 #
-# html_theme_options = {
-#     "switcher": {
-#         "json_url": "https://leehart.github.io/tmp_test_6/switcher.json",
-#     },
-#     "check_switcher": True,
-#     "switcher": {
-#         "version_match": release,
-#     },
-#     "navbar_start": ["navbar-logo", "version-switcher"]
-# }
+html_theme_options = {
+    "switcher": {
+        "json_url": "https://leehart.github.io/tmp_test_6/switcher.json",
+    },
+    "check_switcher": True,
+    "switcher": {
+        "version_match": release,
+    },
+    "navbar_start": ["navbar-logo", "version-switcher"]
+}
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
