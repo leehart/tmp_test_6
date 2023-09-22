@@ -65,9 +65,9 @@ html_theme_options = {
     "switcher": {
         "check_switcher": True,
         "version_match": "latest",
-        "json_url": "https://leehart.github.io/tmp_test_6/switcher.json",
-        "navbar_start": ["navbar-logo", "version-switcher"]
+        "json_url": "https://leehart.github.io/tmp_test_6/switcher.json"
     },
+    "navbar_start": ["navbar-logo", "version-switcher"]
 }
 
 # Add any paths that contain custom static files (such as style sheets) here,
