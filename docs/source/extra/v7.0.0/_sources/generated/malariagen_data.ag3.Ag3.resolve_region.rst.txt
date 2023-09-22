@@ -1,0 +1,6 @@
+﻿malariagen\_data.ag3.Ag3.resolve\_region
+========================================
+
+.. currentmodule:: malariagen_data.ag3
+
+.. automethod:: Ag3.resolve_region

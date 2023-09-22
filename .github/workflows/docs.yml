@@ -33,7 +33,6 @@ jobs:
       - name: Build HTML
         run: |
           cd docs/
-          poetry run make clean
           poetry run make html
 
       - name: Deploy HTML to GitHub Pages

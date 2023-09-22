@@ -1,0 +1,6 @@
+﻿malariagen\_data.ag3.Ag3.v3\_wild
+=================================
+
+.. currentmodule:: malariagen_data.ag3
+
+.. autoproperty:: Ag3.v3_wild

@@ -20,7 +20,7 @@ sys.path.insert(0, os.path.abspath('../..'))
 project = 'malariagen_data API'
 copyright = '2023, MalariaGEN'
 author = 'MalariaGEN'
-release = 'v7.13.0'
+release = 'v7.x'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
@@ -29,7 +29,6 @@ release = 'v7.13.0'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-    'sphinx.ext.autodoc',
     'sphinx.ext.autosummary'
 ]
 
@@ -52,6 +51,8 @@ exclude_patterns = []
 
 #html_theme = 'alabaster'
 html_theme = "pydata_sphinx_theme"
+html_logo = "_static/logo.svg"
+html_favicon = "_static/logo.svg"
 
 # https://pydata-sphinx-theme.readthedocs.io/en/stable/user_guide/version-dropdown.html
 # In theory the JSON could be saved in a folder that is listed under your 
@@ -67,7 +68,20 @@ html_theme_options = {
         "version_match": "dev",
         "json_url": "https://leehart.github.io/tmp_test_6/switcher.json"
     },
-    "navbar_start": ["navbar-logo", "version-switcher"]
+    # Defaults:
+    # "navbar_start": ["navbar-logo"],
+    # "navbar_center": ["navbar-nav"],
+    # "navbar_end": ["navbar-icon-links"],
+    # "navbar_persistent": ["search-button"]
+    #
+    "navbar_center": ["version-switcher", "navbar-nav"],
+    "icon_links": [
+        {
+            "name": "GitHub",
+            "url": "https://github.com/malariagen/malariagen-data-python",
+            "icon": "fa-brands fa-github",
+        }
+    ],
 }
 
 # Add any paths that contain custom static files (such as style sheets) here,

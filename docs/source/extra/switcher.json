@@ -5,7 +5,8 @@
         "url": "https://leehart.github.io/tmp_test_6/"
     },
     {
-        "version": "v7.13.0 (stable)",
+        "name": "v7.13.0 (stable)",
+        "version": "v7.13.0",
         "url": "https://leehart.github.io/tmp_test_6/v7.13.0/",
         "preferred": true
     },
