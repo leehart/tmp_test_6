@@ -64,7 +64,7 @@ html_theme = "pydata_sphinx_theme"
 html_theme_options = {
     "switcher": {
         "check_switcher": True,
-        "version_match": "latest",
+        "version_match": "dev",
         "json_url": "https://leehart.github.io/tmp_test_6/switcher.json"
     },
     "navbar_start": ["navbar-logo", "version-switcher"]
