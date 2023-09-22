@@ -1,36 +1,17 @@
 [
     {
-        "name": "v7.13.x (latest)",
-        "version": "latest",
-        "url": "https://leehart.github.io/tmp_test_6/",
+        "name": "v7.x (latest)",
+        "version": "dev",
+        "url": "https://leehart.github.io/tmp_test_6/"
+    },
+    {
+        "name": "v7.13.0 (stable)",
+        "version": "v7.13.0",
+        "url": "https://leehart.github.io/tmp_test_6/v7.13.0/",
         "preferred": true
     },
     {
         "version": "v7.0.0",
         "url": "https://leehart.github.io/tmp_test_6/v7.0.0/"
-    },
-    {
-        "version": "v6.0.0",
-        "url": "https://leehart.github.io/tmp_test_6/v6.0.0/"
-    },
-    {
-        "version": "v5.0.0",
-        "url": "https://leehart.github.io/tmp_test_6/v5.0.0/"
-    },
-    {
-        "version": "v4.0.0",
-        "url": "https://leehart.github.io/tmp_test_6/v4.0.0/"
-    },
-    {
-        "version": "v3.0.0",
-        "url": "https://leehart.github.io/tmp_test_6/v3.0.0/"
-    },
-    {
-        "version": "v2.0.0",
-        "url": "https://leehart.github.io/tmp_test_6/v2.0.0/"
-    },
-    {
-        "version": "v1.0.0",
-        "url": "https://leehart.github.io/tmp_test_6/v1.0.0/"
     }
 ]

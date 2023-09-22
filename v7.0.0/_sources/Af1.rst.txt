@@ -10,31 +10,16 @@ Basic data access
 .. autosummary::
     :toctree: generated/
 
-    client_location
-    config
-    lookup_release
-    open_file
-    read_files
+    pca
     releases
     results_cache_get
     results_cache_set
-    sample_sets
 
 Sample metadata access
 ----------------------
 .. autosummary::
     :toctree: generated/
 
-    add_extra_metadata
-    aim_metadata
-    clear_extra_metadata
-    cohorts_metadata
-    count_samples
-    general_metadata
-    lookup_sample
-    plot_samples_bar
-    plot_samples_interactive_map
-    sample_metadata
     wgs_data_catalog
 
 SNP data access
@@ -42,47 +27,37 @@ SNP data access
 .. autosummary::
     :toctree: generated/
 
+    geneset
+    genome_features
+    genome_sequence
+    igv
     is_accessible
+    open_genome
     open_site_annotations
-    open_site_filters
     open_snp_genotypes
-    open_snp_sites
+    plot_heterozygosity
+    plot_heterozygosity_track
+    plot_genes
     plot_snps
     plot_snps_track
+    plot_transcript
+    resolve_region
     site_annotations
     site_filters
-    site_mask_ids
     snp_allele_counts
     snp_calls
     snp_dataset
+    snp_effects
     snp_genotypes
-    snp_sites
     snp_variants
+    snp_sites
 
-Haplotype data access
----------------------
-.. autosummary::
-    :toctree: generated/
-
-    haplotypes
-    open_haplotypes
-    open_haplotype_sites
-    phasing_analysis_ids
-    
 
 CNV data access
 ---------------
 .. autosummary::
     :toctree: generated/
 
-    coverage_calls_analysis_ids
-    cnv_coverage_calls
-    cnv_discordant_read_calls
-    cnv_hmm
-    open_cnv_coverage_calls
-    open_cnv_discordant_read_calls
-    open_cnv_hmm
-    plot_cnv_hmm_coverage
-    plot_cnv_hmm_coverage_track
-    plot_cnv_hmm_heatmap
-    plot_cnv_hmm_heatmap_track
+    plot_roh
+    plot_roh_track
+    roh_hmm
