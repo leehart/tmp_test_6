@@ -2,14 +2,13 @@ name: tag_docs
 on:
   push:
     tags:
-      - 'v[0-9]+.[0-9]+.[0-9]+'
+      - 'v[0-9]+.[0-9]+.[0-9]+':
+          branches:
+            - main
 jobs:
   tag_docs:
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main'
     steps:
      - name: Eyeball GitHub tag
        run: |
-         echo "Tag name from GITHUB_REF_NAME: $GITHUB_REF_NAME"
-         echo "Tag name from github.ref_name: ${{  github.ref_name }}"
-         
+         echo "Tag name from GITHUB_REF: ${{ github.ref }}"
