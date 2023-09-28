@@ -7,10 +7,11 @@ jobs:
   tag_docs:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - name: Set RELEASE_VERSION env var
-        run: echo "RELEASE_VERSION=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV
-      - name: Eyeball RELEASE_VERSION env var
+      - name: Eyeball GITHUB_REF
+        run: echo $GITHUB_REF#refs/*/
+      - name: Set TAG_RELEASE_VERSION env var
+        run: echo "TAG_RELEASE_VERSION=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV
+      - name: Eyeball TAG_RELEASE_VERSION env var
         run: |
           echo $RELEASE_VERSION
           echo ${{ env.RELEASE_VERSION }}
