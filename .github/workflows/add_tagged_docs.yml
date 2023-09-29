@@ -67,7 +67,7 @@ jobs:
         run: |
           git add .
           git commit -m "Add documentation for $VERSION_TAG"
-          git push origin $BRANCH_NAME
+          git push origin "$BRANCH_NAME"
 
       - name: Create pull request
         run: |
