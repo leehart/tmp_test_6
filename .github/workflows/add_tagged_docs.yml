@@ -75,7 +75,7 @@ jobs:
           PR_TITLE="Merge $BRANCH_NAME into main"
           PR_BODY="Automated pull request from GitHub Actions workflow"
           RESPONSE=$(curl -X POST \
-            -H "Authorization: Bearer ${{ secrets.GH_TOKEN }}" \
+            -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
             -H "Accept: application/vnd.github.v3+json" \
             https://api.github.com/repos/leehart/tmp_test_6/pulls \
             -d '{
@@ -86,4 +86,4 @@ jobs:
             }')
           echo "$RESPONSE"
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
