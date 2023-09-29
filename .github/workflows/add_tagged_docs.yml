@@ -28,7 +28,6 @@ jobs:
           git checkout -b $branch_name
           echo "BRANCH_NAME=$branch_name" >> $GITHUB_ENV
 
-
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
@@ -75,6 +74,7 @@ jobs:
   
       - name: Merge new branch into main branch
         run: |
+          git pull origin main
           git checkout main
           git merge $BRANCH_NAME --no-commit
           git status -u
