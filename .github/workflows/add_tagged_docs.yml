@@ -67,7 +67,11 @@ jobs:
         run: |
           git add .
           git commit -m "Add documentation for $VERSION_TAG"
-          git push origin "$BRANCH_NAME"
+      
+      - name: Push new branch to origin
+        run: git push origin "$BRANCH_NAME"
+        env:
+          GH_PR: ${{ secrets.GH_PR }} 
 
       - name: Create pull request
         run: |
@@ -84,3 +88,5 @@ jobs:
               "base": "main"
             }')
           echo "$RESPONSE"
+        env:
+          GH_PR: ${{ secrets.GH_PR }} 
