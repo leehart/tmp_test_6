@@ -70,26 +70,11 @@ jobs:
         run: |
           git add .
           git commit -m "Add documentation for $VERSION_TAG"
-      
-      - name: Push new branch to origin
-        run: git push origin "$BRANCH_NAME"
+          git push
         env:
           GH_PR: ${{ secrets.GH_PR }}
-
-      - name: Create pull request
-        run: |
-          PR_TITLE="Merge $BRANCH_NAME into main"
-          PR_BODY="Automated pull request from GitHub Actions workflow"
-          RESPONSE=$(curl -X POST \
-            -H "Authorization: Bearer ${{ secrets.GH_PR }}" \
-            -H "Accept: application/vnd.github.v3+json" \
-            https://api.github.com/repos/leehart/tmp_test_6/pulls \
-            -d '{
-              "title": "'"$PR_TITLE"'",
-              "body": "'"$PR_BODY"'",
-              "head": "'"$BRANCH_NAME"'",
-              "base": "main"
-            }')
-          echo "$RESPONSE"
-        env:
-          GH_PR: ${{ secrets.GH_PR }} 
+    
+    - name: Create pull request
+      run: gh pr create -B main -H "$BRANCH_NAME" --title "Merge $BRANCH_NAME into main" --body 'Automated pull request from GitHub Actions workflow'
+      env:
+        GH_PR: ${{ secrets.GH_PR }}
