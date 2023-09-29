@@ -62,10 +62,14 @@ html_favicon = "_static/logo.svg"
 #
 # See https://github.com/pydata/pydata-sphinx-theme/issues/1389
 #
+
+# Facilitate command line override
+version_match = "dev"
+
 html_theme_options = {
     "switcher": {
         "check_switcher": True,
-        "version_match": "dev",
+        "version_match": version_match,
         "json_url": "https://leehart.github.io/tmp_test_6/switcher.json"
     },
     # Defaults:

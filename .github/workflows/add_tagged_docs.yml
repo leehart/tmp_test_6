@@ -45,10 +45,10 @@ jobs:
       - name: Install docs dependencies
         run: poetry run pip install -r docs/requirements.txt
 
-      - name: Build HTML
+      - name: Build HTML with config overrides
         run: |
           cd docs/
-          poetry run make html
+          poetry run sphinx-build -b html source build -D release=$VERSION_TAG -D version_match=$VERSION_TAG -D html_extra_path=
 
       - name: Move built HTML to source extra dir
         run: |
@@ -72,9 +72,15 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   
-      - name: Merge new branch into main branch
+      - name: Merge new branch into main branch, eyeball status
         run: |
           git pull origin main
           git checkout main
           git merge $BRANCH_NAME --no-commit
-          git status -u
+          git status
+
+      # - name: Add and commit all changes to the main branch and push
+      #   run: |
+      #     git add .
+      #     git commit -m "Merge $BRANCH_NAME into main"
+      #     git push origin main
