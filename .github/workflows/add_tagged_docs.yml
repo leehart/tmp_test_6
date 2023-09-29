@@ -23,7 +23,11 @@ jobs:
           ref: ${{ env.VERSION_TAG }}
 
       - name: Check out a new branch
-        run: git checkout -b auto_add_tagged_docs_$VERSION_TAG
+        run: |
+          branch_name="auto_add_tagged_docs_$VERSION_TAG"
+          git checkout -b $branch_name
+          echo "BRANCH_NAME=$branch_name" >> $GITHUB_ENV
+
 
       - name: Set up Python
         uses: actions/setup-python@v4
@@ -69,3 +73,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   
+      - name: Merge new branch into main branch
+        run: |
+          git checkout main
+          git merge $BRANCH_NAME --no-commit
+          git status -u
