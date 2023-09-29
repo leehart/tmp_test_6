@@ -61,3 +61,6 @@ jobs:
         run: |
           git add .
           git commit -m "Add documentation for $VERSION_TAG"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  
