@@ -70,11 +70,10 @@ jobs:
         run: |
           git add .
           git commit -m "Add documentation for $VERSION_TAG"
-          git push
-        env:
-          GH_PR: ${{ secrets.GH_PR }}
-    
-      - name: Create pull request
-        run: gh pr create -B main -H "$BRANCH_NAME" --title "Merge $BRANCH_NAME into main" --body 'Automated pull request from GitHub Actions workflow'
+      
+      - name: Push new branch upstream and create pull request
+        run: |
+          git push --set-upstream origin "$BRANCH_NAME"
+          gh pr create -B main -H "$BRANCH_NAME" --title "Merge $BRANCH_NAME into main" --body 'Automated pull request from GitHub Actions workflow'
         env:
           GH_PR: ${{ secrets.GH_PR }}
