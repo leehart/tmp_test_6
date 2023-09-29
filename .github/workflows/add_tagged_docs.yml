@@ -77,8 +77,8 @@ jobs:
           git merge $BRANCH_NAME --no-commit
           git status
 
-      # - name: Add and commit all changes to the main branch and push
-      #   run: |
-      #     git add .
-      #     git commit -m "Merge $BRANCH_NAME into main"
-      #     git push origin main
+      - name: Add and commit all changes to the main branch and push
+        run: |
+          git add .
+          git commit -m "Merge $BRANCH_NAME into main"
+          git push origin main
