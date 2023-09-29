@@ -54,8 +54,6 @@ jobs:
         run: |
           mkdir -p docs/source/extra/$VERSION_TAG
           mv docs/build/html/* docs/source/extra/$VERSION_TAG/
-          rm -vr docs/source/extra/$VERSION_TAG/v*/
-          rm -v docs/source/extra/$VERSION_TAG/switcher.json
 
       - name: Eyeball the Git status
         run: git status -u
