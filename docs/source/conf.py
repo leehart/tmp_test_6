@@ -21,6 +21,7 @@ project = 'malariagen_data API'
 copyright = '2023, MalariaGEN'
 author = 'MalariaGEN'
 release = 'v7.x'
+version = 'dev'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
@@ -62,14 +63,10 @@ html_favicon = "_static/logo.svg"
 #
 # See https://github.com/pydata/pydata-sphinx-theme/issues/1389
 #
-
-# Facilitate command line override
-version_match = "dev"
-
 html_theme_options = {
     "switcher": {
         "check_switcher": True,
-        "version_match": version_match,
+        "version_match": version,
         "json_url": "https://leehart.github.io/tmp_test_6/switcher.json"
     },
     # Defaults:
