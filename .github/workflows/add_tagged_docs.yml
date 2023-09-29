@@ -63,10 +63,11 @@ jobs:
           git config --global user.email "4256466+leehart@users.noreply.github.com"
           git config --global user.name "_"
 
-      - name: Add and commit all changes to the new branch
+      - name: Add and commit all changes to the new branch, push to origin
         run: |
           git add .
           git commit -m "Add documentation for $VERSION_TAG"
+          git push origin $BRANCH_NAME
 
       - name: Create pull request
         run: |
