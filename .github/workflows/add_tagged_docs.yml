@@ -20,7 +20,7 @@ jobs:
       - name: Check out VERSION_TAG
         uses: actions/checkout@v3
         with:
-          ref: $VERSION_TAG
+          ref: ${{ env.VERSION_TAG }}
 
       - name: Check out a new branch
         run: git checkout -b auto_add_tagged_docs_$VERSION_TAG
