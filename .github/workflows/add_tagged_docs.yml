@@ -57,6 +57,11 @@ jobs:
       - name: Eyeball the Git status
         run: git status -u
 
+      - name: Configure Git user
+        run: |
+          git config --global user.email "4256466+leehart@users.noreply.github.com"
+          git config --global user.name "_"
+
       - name: Add and commit all changes to the new branch
         run: |
           git add .
