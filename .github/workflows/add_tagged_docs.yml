@@ -20,10 +20,10 @@ jobs:
       - name: Check out VERSION_TAG
         uses: actions/checkout@v3
         with:
-          ref: ${{ env.VERSION_TAG }}
+          ref: $VERSION_TAG
 
-      - name: Check out new branch
-        run: git checkout -b auto_add_tagged_docs_${{ env.VERSION_TAG }}
+      - name: Check out a new branch
+        run: git checkout -b auto_add_tagged_docs_$VERSION_TAG
 
       - name: Set up Python
         uses: actions/setup-python@v4
@@ -53,8 +53,11 @@ jobs:
           mv docs/build/html/* docs/source/extra/$VERSION_TAG/
           rm -vr docs/source/extra/$VERSION_TAG/v*/
           rm -v docs/source/extra/$VERSION_TAG/switcher.json
-        env:
-          VERSION_TAG: ${{ env.VERSION_TAG }}
 
       - name: Eyeball the Git status
         run: git status -u
+
+      - name: Add and commit all changes to the new branch
+        run: |
+          git add .
+          git commit -m "Add documentation for $VERSION_TAG"
