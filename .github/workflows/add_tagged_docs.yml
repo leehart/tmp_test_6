@@ -67,15 +67,13 @@ jobs:
         run: |
           git add .
           git commit -m "Add documentation for $VERSION_TAG"
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Create pull request
         run: |
           PR_TITLE="Merge $BRANCH_NAME into main"
           PR_BODY="Automated pull request from GitHub Actions workflow"
           RESPONSE=$(curl -X POST \
-            -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+            -H "Authorization: Bearer ${{ secrets.GH_PR }}" \
             -H "Accept: application/vnd.github.v3+json" \
             https://api.github.com/repos/leehart/tmp_test_6/pulls \
             -d '{
@@ -85,5 +83,3 @@ jobs:
               "base": "main"
             }')
           echo "$RESPONSE"
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
