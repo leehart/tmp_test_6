@@ -3,11 +3,11 @@ on:
   push:
     tags:
       - 'v[0-9]+.[0-9]+.[0-9]+'
-permissions:
-  contents: write
 jobs:
   add_tagged_docs:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       # Remove the prefix "refs/*/" from $GITHUB_REF
       # Add var assignment to the $GITHUB_ENV file, so VERSION_TAG is available in later steps
