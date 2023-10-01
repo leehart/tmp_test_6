@@ -76,10 +76,10 @@ jobs:
       - name: Push new branch upstream 🚀
         run: git push --set-upstream origin "$BRANCH_NAME"
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_PR: ${{ secrets.GH_PR }}
 
       # Note: To use GitHub CLI in a GitHub Actions workflow, set the GH_TOKEN environment variable.
       - name: Create pull request 🦟
         run: gh pr create -B main -H "$BRANCH_NAME" --title "Merge $BRANCH_NAME into main" --body 'Automated pull request from GitHub Actions workflow. **Note, you will still need to update `docs/source/extra/switcher.json` accordingly.**'
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_PR }}
