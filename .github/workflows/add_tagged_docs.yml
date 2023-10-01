@@ -78,7 +78,8 @@ jobs:
         env:
           GH_PR: ${{ secrets.GH_PR }}
 
+      # Note: To use GitHub CLI in a GitHub Actions workflow, set the GH_TOKEN environment variable.
       - name: Create pull request
         run: gh pr create -B main -H "$BRANCH_NAME" --title "Merge $BRANCH_NAME into main" --body 'Automated pull request from GitHub Actions workflow'
         env:
-          GH_PR: ${{ secrets.GH_PR }}
+          GH_TOKEN: ${{ secrets.GH_PR }}
