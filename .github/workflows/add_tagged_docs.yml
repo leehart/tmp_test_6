@@ -53,7 +53,7 @@ jobs:
       - name: Build HTML with config overrides 🏗️
         run: |
           cd docs/
-          poetry run sphinx-build -M html source build -D release=$VERSION_TAG -D version=$VERSION_TAG -D html_extra_path=__ignore -D html_theme_options.switcher.version_match=$VERSION_TAG
+          poetry run sphinx-build -vvv -M html source build -D release="$VERSION_TAG" -D version="$VERSION_TAG" -D html_extra_path=__ignore -D html_theme_options.switcher.version_match="$VERSION_TAG"
 
       - name: Move built HTML to source extra dir 🏗️
         run: |
