@@ -11,6 +11,7 @@
 
 import os
 import sys
+import malariagen_data
 sys.path.insert(0, os.path.abspath('../..'))
 
 
@@ -20,8 +21,8 @@ sys.path.insert(0, os.path.abspath('../..'))
 project = 'malariagen_data API'
 copyright = '2023, MalariaGEN'
 author = 'MalariaGEN'
-release = 'v7.x'
-version = 'dev'
+release = malariagen_data.__version__
+version = malariagen_data.__version__
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
